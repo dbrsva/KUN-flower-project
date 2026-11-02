@@ -31,7 +31,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.put
 
 class SupabaseNotConfiguredException :
-    IllegalStateException("SUPABASE_URL / SUPABASE_ANON_KEY не заданы в local.properties")
+    IllegalStateException("supabase не работает")
 
 object SupabaseProvider {
     val isConfigured: Boolean
