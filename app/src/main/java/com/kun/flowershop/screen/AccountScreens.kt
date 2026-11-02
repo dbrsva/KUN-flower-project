@@ -293,6 +293,7 @@ fun AddressesScreen(
     val context = LocalContext.current
     val items by viewModel.items.collectAsStateWithLifecycle()
     var showDialog by remember { mutableStateOf(false) }
+    var addressToDelete by remember { mutableStateOf<AddressRow?>(null) }
     var title by remember { mutableStateOf("") }
     var address by remember { mutableStateOf("") }
 
@@ -346,11 +347,7 @@ fun AddressesScreen(
                                 modifier = Modifier
                                     .size(40.dp)
                                     .clip(CircleShape)
-                                    .clickable {
-                                        viewModel.remove(item.id) { ok ->
-                                            if (!ok) context.toast(context.getString(R.string.err_save))
-                                        }
-                                    },
+                                    .clickable { addressToDelete = item },
                                 contentAlignment = Alignment.Center,
                             ) {
                                 Icon(
@@ -373,6 +370,20 @@ fun AddressesScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 24.dp, end = 24.dp, top = 8.dp, bottom = 16.dp),
+        )
+    }
+
+    addressToDelete?.let { item ->
+        ConfirmDeleteDialog(
+            title = stringResource(R.string.confirm_delete_address_title),
+            text = stringResource(R.string.confirm_delete_address_text, item.title?.takeIf { it.isNotBlank() } ?: item.address),
+            onConfirm = {
+                addressToDelete = null
+                viewModel.remove(item.id) { ok ->
+                    if (!ok) context.toast(context.getString(R.string.err_save))
+                }
+            },
+            onDismiss = { addressToDelete = null },
         )
     }
 
@@ -440,6 +451,7 @@ fun PaymentsScreen(
     val cards by viewModel.cards.collectAsStateWithLifecycle()
     var showDialog by remember { mutableStateOf(false) }
     var number by remember { mutableStateOf("") }
+    var cardToDelete by remember { mutableStateOf<SavedCard?>(null) }
 
     Column(
         modifier = Modifier
@@ -488,7 +500,7 @@ fun PaymentsScreen(
                                 modifier = Modifier
                                     .size(40.dp)
                                     .clip(CircleShape)
-                                    .clickable { viewModel.remove(card) },
+                                    .clickable { cardToDelete = card },
                                 contentAlignment = Alignment.Center,
                             ) {
                                 Icon(
@@ -511,6 +523,18 @@ fun PaymentsScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 24.dp, end = 24.dp, top = 8.dp, bottom = 16.dp),
+        )
+    }
+
+    cardToDelete?.let { card ->
+        ConfirmDeleteDialog(
+            title = stringResource(R.string.confirm_delete_card_title),
+            text = stringResource(R.string.confirm_delete_card_text, card.brand + " ****" + card.last4),
+            onConfirm = {
+                cardToDelete = null
+                viewModel.remove(card)
+            },
+            onDismiss = { cardToDelete = null },
         )
     }
 

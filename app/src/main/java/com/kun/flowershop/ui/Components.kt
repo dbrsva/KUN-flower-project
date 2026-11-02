@@ -39,10 +39,12 @@ import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material.icons.outlined.VisibilityOff
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -624,5 +626,31 @@ fun RadioMark(selected: Boolean, modifier: Modifier = Modifier) {
                 if (selected) Modifier.background(KunColors.Green)
                 else Modifier.border(1.dp, KunColors.Green, CircleShape)
             ),
+    )
+}
+
+/** Диалог подтверждения удаления: запись удаляется только после нажатия «Удалить». */
+@Composable
+fun ConfirmDeleteDialog(
+    title: String,
+    text: String,
+    onConfirm: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        containerColor = KunColors.Background,
+        title = { Text(title, style = kunText(18f, FontWeight.SemiBold, KunColors.Green)) },
+        text = { Text(text, style = kunText(14f, color = KunColors.TextGray, lineHeight = 19f)) },
+        confirmButton = {
+            TextButton(onClick = onConfirm) {
+                Text(stringResource(R.string.cd_remove), color = Color(0xFFC0392B))
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text(stringResource(R.string.cancel), color = KunColors.Green)
+            }
+        },
     )
 }

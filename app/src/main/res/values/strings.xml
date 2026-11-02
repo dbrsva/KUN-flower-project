@@ -85,6 +85,12 @@
     <string name="cd_add_to_cart">В корзину</string>
     <string name="cd_remove">Удалить</string>
     <string name="cancel">Отмена</string>
+    <string name="confirm_delete_address_title">Удалить адрес?</string>
+    <string name="confirm_delete_address_text">Адрес «%1$s» будет удалён из списка сохранённых.</string>
+    <string name="confirm_delete_card_title">Удалить карту?</string>
+    <string name="confirm_delete_card_text">Карта %1$s будет удалена из способов оплаты.</string>
+    <string name="confirm_delete_cart_title">Удалить товар из корзины?</string>
+    <string name="confirm_delete_cart_text">«%1$s» будет удалён из корзины.</string>
 
     <string name="home_new">Новинка</string>
     <string name="home_new_section">Новинки</string>

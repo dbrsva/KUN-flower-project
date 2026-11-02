@@ -267,6 +267,19 @@ fun CartScreen(
     val favoriteIds by viewModel.favoriteIds.collectAsStateWithLifecycle()
     val promo by viewModel.promo.collectAsStateWithLifecycle()
     val promoStatus by viewModel.promoStatus.collectAsStateWithLifecycle()
+    var lineToDelete by remember { mutableStateOf<CartLine?>(null) }
+
+    lineToDelete?.let { line ->
+        ConfirmDeleteDialog(
+            title = stringResource(R.string.confirm_delete_cart_title),
+            text = stringResource(R.string.confirm_delete_cart_text, line.product.name),
+            onConfirm = {
+                lineToDelete = null
+                viewModel.remove(line)
+            },
+            onDismiss = { lineToDelete = null },
+        )
+    }
 
     CartContent(
         load = load,
@@ -277,7 +290,7 @@ fun CartScreen(
         promoStatus = promoStatus,
         onIncrease = viewModel::increase,
         onDecrease = viewModel::decrease,
-        onRemove = viewModel::remove,
+        onRemove = { lineToDelete = it },
         onFavorite = { viewModel.toggleFavorite(it.id, onRequireLogin) },
         onApplyPromo = viewModel::applyPromo,
         onClearPromo = viewModel::clearPromo,
