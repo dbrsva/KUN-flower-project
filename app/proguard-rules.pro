@@ -1,0 +1,5 @@
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.**
+-keep,includedescriptorclasses class com.kun.flowershop.**$$serializer { *; }
+-keepclassmembers class com.kun.flowershop.** { *** Companion; }
+-keepclasseswithmembers class com.kun.flowershop.** { kotlinx.serialization.KSerializer serializer(...); }

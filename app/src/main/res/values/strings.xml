@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KUN</string>
+
+    <string name="brand_name">KÜN</string>
+    <string name="brand_tagline">цветочный магазин</string>
+
+    <string name="onb_skip">Пропустить</string>
+    <string name="onb_next">Далее →</string>
+    <string name="onb_title_1">Цветы, которые говорят за вас</string>
+    <string name="onb_subtitle_1">Свежие букеты, авторские композиции и особенная атмосфера</string>
+    <string name="onb_title_2">Закажите доставку свежих цветов без повода</string>
+    <string name="onb_subtitle_2">Бесплатная доставка до квартиры</string>
+    <string name="onb_title_3">Радуйте себя и своих близких</string>
+    <string name="onb_subtitle_3">Всегда актуальные композиции</string>
+
+    <string name="reg_title">Регистрация</string>
+    <string name="reg_subtitle">Создайте аккаунт, чтобы\nоформлять заказы и сохранять\nлюбимые букеты</string>
+    <string name="reg_have_account">Уже есть аккаунт? </string>
+    <string name="reg_login_link">Войти</string>
+    <string name="field_name">Имя</string>
+    <string name="field_email">E-mail</string>
+    <string name="field_phone">Номер телефона</string>
+    <string name="field_password">Пароль</string>
+    <string name="field_password_repeat">Повторите пароль</string>
+    <string name="reg_button">Зарегистрироваться →</string>
+    <string name="reg_terms">Я соглашаюсь с условиями использования и политикой конфиденциальности</string>
+
+    <string name="login_title">Вход</string>
+    <string name="login_subtitle">Рады видеть вас снова</string>
+    <string name="field_email_or_phone">E-mail или номер телефона</string>
+    <string name="login_forgot">Забыли пароль?</string>
+    <string name="login_button">Войти →</string>
+    <string name="login_no_account">Нет аккаунта? </string>
+    <string name="login_register_link">Зарегистрироваться</string>
+
+    <string name="err_empty_name">Введите имя</string>
+    <string name="err_invalid_email">Введите корректный e-mail</string>
+    <string name="err_empty_fields">Заполните e-mail и пароль</string>
+    <string name="err_short_password">Пароль — не менее 6 символов</string>
+    <string name="err_password_mismatch">Пароли не совпадают</string>
+    <string name="err_terms">Подтвердите согласие с условиями</string>
+    <string name="err_invalid_credentials">Неверный e-mail или пароль</string>
+    <string name="err_email_taken">Этот e-mail уже зарегистрирован</string>
+    <string name="err_network">Нет соединения с сервером</string>
+    <string name="err_not_configured">Не заданы ключи Supabase (local.properties)</string>
+    <string name="err_unknown">Что-то пошло не так. Попробуйте ещё раз</string>
+    <string name="info_confirm_email">Мы отправили письмо — подтвердите e-mail и войдите</string>
+
+    <string name="home_greeting">Привет</string>
+    <string name="home_greeting_name">Привет, %1$s</string>
+    <string name="home_subtitle">пусть сегодня будет\nбольше цветов</string>
+    <string name="home_search_placeholder">Поиск цветов, букетов, композиций...</string>
+    <string name="home_popular">Популярное</string>
+    <string name="home_see_all">смотреть все →</string>
+
+    <string name="catalog_title">Каталог</string>
+    <string name="catalog_search_placeholder">Поиск по каталогу...</string>
+    <string name="catalog_price_from">от %1$s ₽</string>
+    <string name="catalog_empty">Ничего не найдено</string>
+    <string name="catalog_error">Не удалось загрузить каталог</string>
+    <string name="retry">Повторить</string>
+
+    <string name="tab_home">Главная</string>
+    <string name="tab_catalog">Каталог</string>
+    <string name="tab_favorites">Избранное</string>
+    <string name="tab_cart">Корзина</string>
+
+    <string name="coming_soon"></string>
+    <string name="favorites_title">Избранное</string>
+    <string name="cart_title">Корзина</string>
+
+    <string name="cd_back">Назад</string>
+    <string name="cd_notifications">Уведомления</string>
+    <string name="cd_profile">Профиль</string>
+    <string name="cd_search">Поиск</string>
+    <string name="cd_show_password">Показать пароль</string>
+    <string name="cd_hide_password">Скрыть пароль</string>
+    <string name="cd_open">Открыть</string>
+
+    <string name="login_short">Войти</string>
+    <string name="soon">Скоро будет доступно</string>
+    <string name="checkout_soon">Оформление заказа появится в следующей версии</string>
+    <string name="added_to_cart">Добавлено в корзину</string>
+    <string name="cd_add_to_cart">В корзину</string>
+    <string name="cd_remove">Удалить</string>
+    <string name="cancel">Отмена</string>
+
+    <string name="home_new">Новинка</string>
+    <string name="home_new_section">Новинки</string>
+    <string name="home_view">Смотреть</string>
+    <string name="home_info_title">Получение заказа</string>
+    <string name="home_info_pickup">Самовывоз</string>
+    <string name="home_info_pickup_value">Бесплатно, сегодня</string>
+    <string name="home_info_delivery">Доставка</string>
+    <string name="home_info_delivery_value">от 250 ₽, сегодня</string>
+    <string name="home_to_catalog">Перейти в каталог</string>
+
+    <string name="favorites_login_prompt">Войдите в аккаунт, чтобы сохранять любимые букеты в избранное</string>
+    <string name="favorites_empty">Здесь пока пусто. Нажмите на сердечко у понравившегося товара</string>
+
+    <string name="cart_empty">Корзина пуста. Выберите что-нибудь в каталоге</string>
+    <string name="cart_to_catalog">В каталог</string>
+    <string name="cart_total">Итого</string>
+    <string name="cart_checkout">Оформить заказ</string>
+    <string name="cart_promo">Промокод</string>
+
+    <string name="profile_title">Профиль</string>
+    <string name="menu_orders">Мои заказы</string>
+    <string name="menu_notifications">Уведомления</string>
+    <string name="menu_payment">Способ оплаты</string>
+    <string name="menu_addresses">Адреса доставки</string>
+    <string name="menu_help">Помощь</string>
+    <string name="logout">Выйти</string>
+    <string name="logout_confirm_title">Выйти из аккаунта?</string>
+    <string name="logout_confirm_text">Корзина на устройстве сохранится. Избранное снова появится после входа.</string>
+
+    <string name="add_to_cart">Добавить в корзину</string>
+    <string name="out_of_stock">Нет в наличии</string>
+    <string name="product_size">Размер</string>
+    <string name="pieces_fmt">(%1$d шт.)</string>
+    <string name="product_not_found">Товар не найден</string>
+
+    <string name="search_hint_start">Начните вводить название букета или цветка</string>
+
+    <string name="cart_discount">Скидка</string>
+    <string name="promo_applied">Промокод %1$s: скидка %2$d%%</string>
+    <string name="promo_not_found">Промокод не найден</string>
+    <string name="cd_clear">Сбросить</string>
+    <string name="cd_edit">Редактировать</string>
+
+    <string name="checkout_title">Оформление заказа</string>
+    <string name="checkout_delivery">Доставка</string>
+    <string name="checkout_pickup">Самовывоз</string>
+    <string name="checkout_pickup_note">Бесплатно, сегодня</string>
+    <string name="checkout_delivery_option">Доставка</string>
+    <string name="checkout_delivery_note">от 250 ₽, сегодня</string>
+    <string name="checkout_delivery_fee">Стоимость доставки</string>
+    <string name="checkout_address">Адрес</string>
+    <string name="checkout_address_hint">Введите адрес доставки</string>
+    <string name="checkout_shop_address">г. Якутск, ул. Ленина 12</string>
+    <string name="checkout_payment">Оплата</string>
+    <string name="pay_card">Картой онлайн</string>
+    <string name="pay_card_test">Тестовый режим</string>
+    <string name="pay_sberpay">SberPay</string>
+    <string name="checkout_comment">Комментарий к заказу</string>
+    <string name="checkout_comment_hint">Например, позвоните перед доставкой</string>
+    <string name="checkout_pay">Оплатить заказ</string>
+    <string name="checkout_processing">Обработка платежа...</string>
+    <string name="err_address">Укажите адрес доставки</string>
+    <string name="err_order">Не удалось оформить заказ</string>
+    <string name="err_cart_empty">Корзина пуста</string>
+
+    <string name="thanks_title">Спасибо за ваш заказ!</string>
+    <string name="thanks_text">Мы уже собираем ваш букет и скоро\nсвяжемся с вами</string>
+    <string name="thanks_home">Вернуться на главную</string>
+
+    <string name="orders_title">Мои заказы</string>
+    <string name="orders_empty">У вас пока нет заказов</string>
+    <string name="orders_error">Не удалось загрузить заказы</string>
+    <string name="order_number">Заказ №%1$d</string>
+    <string name="order_item_unknown">Товар №%1$d</string>
+
+    <string name="notifications_title">Уведомления</string>
+    <string name="notifications_empty">Уведомлений пока нет</string>
+    <string name="notifications_error">Не удалось загрузить уведомления</string>
+
+    <string name="personal_title">Личные данные</string>
+    <string name="personal_save">Сохранить</string>
+    <string name="personal_password_title">Смена пароля</string>
+    <string name="personal_new_password">Новый пароль</string>
+    <string name="personal_change_password">Сменить пароль</string>
+    <string name="info_saved">Данные сохранены</string>
+    <string name="info_password_changed">Пароль изменён</string>
+    <string name="err_save">Не удалось сохранить</string>
+
+    <string name="addresses_title">Адреса доставки</string>
+    <string name="addresses_empty">Сохранённых адресов пока нет</string>
+    <string name="address_add">Добавить адрес</string>
+    <string name="address_title_hint">Название (например, Дом)</string>
+    <string name="address_value_hint">Город, улица, дом, квартира</string>
+
+    <string name="payments_title">Способ оплаты</string>
+    <string name="payments_note">Оплата работает в тестовом режиме: деньги не списываются, сохраняются только последние 4 цифры карты</string>
+    <string name="payments_empty">Сохранённых карт пока нет</string>
+    <string name="card_add">Добавить карту</string>
+    <string name="card_number_hint">Номер карты</string>
+    <string name="card_number_error">Введите номер карты полностью</string>
+
+    <string name="help_title">Помощь</string>
+    <string name="help_label_address">Магазин</string>
+    <string name="help_label_phone">Телефон</string>
+    <string name="help_label_email">E-mail</string>
+
+    <string name="help_phone_value">+7 (996) 915-71-22</string>
+    <string name="help_email_value">KunFlowersSup@bk.ru</string>
+    <string name="help_call">Позвонить</string>
+    <string name="help_write">Написать</string>
+    <string name="help_faq">Частые вопросы</string>
+    <string name="faq_q1">Как быстро вы доставите заказ?</string>
+    <string name="faq_a1">Самовывоз бесплатный и доступен в день заказа. Доставка от 250 ₽, тоже в день заказа.</string>
+    <string name="faq_q2">Как оплатить заказ?</string>
+    <string name="faq_a2">При оформлении заказа выберите оплату картой онлайн или через SberPay.</string>
+    <string name="faq_q3">Можно ли изменить или отменить заказ?</string>
+    <string name="faq_a3">Позвоните или напишите нам как можно скорее, пока букет ещё не собран.</string>
+
+    <string name="forgot_title">Восстановление пароля</string>
+    <string name="forgot_subtitle">Укажите e-mail, и мы отправим ссылку для сброса пароля</string>
+    <string name="forgot_button">Отправить ссылку</string>
+    <string name="info_reset_sent">Мы отправили письмо со ссылкой для сброса пароля</string>
+</resources>
