@@ -7,12 +7,15 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
-val localProps = Properties().apply {
-    val file = rootProject.file("local.properties")
+fun loadProps(fileName: String) = Properties().apply {
+    val file = rootProject.file(fileName)
     if (file.exists()) file.inputStream().use { load(it) }
 }
+// supabase.properties лежит в git (URL + публичный anon-ключ), local.properties может их переопределить
+val sharedProps = loadProps("supabase.properties")
+val localProps = loadProps("local.properties")
 fun localProp(name: String, default: String = ""): String =
-    (localProps.getProperty(name) ?: default).trim()
+    (localProps.getProperty(name) ?: sharedProps.getProperty(name) ?: default).trim()
 
 android {
     namespace = "com.kun.flowershop"
